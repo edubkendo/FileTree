@@ -109,6 +109,7 @@ module SimpleTree
   def ancestors
     d = Array.new
     current = self.parent()
+    d << current
 
     until d.include?(current.parent)
       current = current.parent
