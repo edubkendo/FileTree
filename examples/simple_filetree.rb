@@ -1,30 +1,30 @@
 require "filetree"
 
-tree = FileTree.new('/home/eric/test/test1/test2')
-# => #<FileTree:/home/eric/test/test1/test2>
+tree = FileTree.new('/home/user/test/test1/test2')
+# => #<FileTree:/home/user/test/test1/test2>
 
 tree.parent
-# => #<FileTree:/home/eric/test/test1>
+# => #<FileTree:/home/user/test/test1>
 
 tree.ancestors
-# => [#<FileTree:/home/eric/test>,
-#     #<FileTree:/home/eric>,
-#     #<FileTree:/home>, # !> method redefined; discarding old name
+# => [#<FileTree:/home/user/test>,
+#     #<FileTree:/home/user>,
+#     #<FileTree:/home>,
 #     #<FileTree:/>]
 
 tree.descendants
-# => [#<FileTree:/home/eric/test/test1/test2/testee>, # !> method redefined; discarding old id
-#     #<FileTree:/home/eric/test/test1/test2/testee/testeggg>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test4>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test4/myfile.txt>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test3>, # !> method redefined; discarding old identifier
-#     #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test3/no>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/test4>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/test4/myfile.txt>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/test3>,
-#     #<FileTree:/home/eric/test/test1/test2/testee/test3/no>]
+# => [#<FileTree:/home/user/test/test1/test2/testee>,
+#     #<FileTree:/home/user/test/test1/test2/testee/testeggg>,
+#     #<FileTree:/home/user/test/test1/test2/testee/testeggg/test4>,
+#     #<FileTree:/home/user/test/test1/test2/testee/testeggg/test4/myfile.txt>,
+#     #<FileTree:/home/user/test/test1/test2/testee/testeggg/test3>,
+#     #<FileTree:/home/user/test/test1/test2/testee/testeggg/test3/no>,
+#     #<FileTree:/home/user/test/test1/test2/testee/test4>,
+#     #<FileTree:/home/user/test/test1/test2/testee/test4/myfile.txt>,
+#     #<FileTree:/home/user/test/test1/test2/testee/test3>,
+#     #<FileTree:/home/user/test/test1/test2/testee/test3/no>]
 
-des_arr = tree.descendants.map { |e| FileTree.new(e.relative_path_from(FileTree.new('/home/eric'))) }
+des_arr = tree.descendants.map { |e| FileTree.new(e.relative_path_from(FileTree.new('/home/user'))) }
 # => [#<FileTree:test/test1/test2/testee>,
 #     #<FileTree:test/test1/test2/testee/testeggg>,
 #     #<FileTree:test/test1/test2/testee/testeggg/test4>,
@@ -45,14 +45,14 @@ des_arr.last.ancestors # infinite loop. "ancestors" depends on hitting "/" to st
 puts tree.tree_rep
 # => nil
 
-# >> #<FileTree:/home/eric/test/test1/test2>
-# >>  \- #<FileTree:/home/eric/test/test1/test2/testee>
-# >>      \- #<FileTree:/home/eric/test/test1/test2/testee/testeggg>
-# >>      |    \- #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test4>
-# >>      |    |    \- #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test4/myfile.txt>
-# >>      |    \- #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test3>
-# >>      |    |    \- #<FileTree:/home/eric/test/test1/test2/testee/testeggg/test3/no>
-# >>      \- #<FileTree:/home/eric/test/test1/test2/testee/test4>
-# >>      |    \- #<FileTree:/home/eric/test/test1/test2/testee/test4/myfile.txt>
-# >>      \- #<FileTree:/home/eric/test/test1/test2/testee/test3>
-# >>      |    \- #<FileTree:/home/eric/test/test1/test2/testee/test3/no>
+# >> #<FileTree:/home/user/test/test1/test2>
+# >>  \- #<FileTree:/home/user/test/test1/test2/testee>
+# >>      \- #<FileTree:/home/user/test/test1/test2/testee/testeggg>
+# >>      |    \- #<FileTree:/home/user/test/test1/test2/testee/testeggg/test4>
+# >>      |    |    \- #<FileTree:/home/user/test/test1/test2/testee/testeggg/test4/myfile.txt>
+# >>      |    \- #<FileTree:/home/user/test/test1/test2/testee/testeggg/test3>
+# >>      |    |    \- #<FileTree:/home/user/test/test1/test2/testee/testeggg/test3/no>
+# >>      \- #<FileTree:/home/user/test/test1/test2/testee/test4>
+# >>      |    \- #<FileTree:/home/user/test/test1/test2/testee/test4/myfile.txt>
+# >>      \- #<FileTree:/home/user/test/test1/test2/testee/test3>
+# >>      |    \- #<FileTree:/home/user/test/test1/test2/testee/test3/no>
