@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
                     "examples/simple_filetree.rb",
                     "filetree.gemspec"
                   ]
+  s.licenses = ["BSD"]
   s.homepage    =
     'https://github.com/edubkendo/FileTree'
 end
