@@ -72,3 +72,7 @@ All credit belongs to, I just cobbled this together from their work.
 
 - [@ealdent](https://github.com/ealdent/simple-tree)
 - The authors and maintainers of [Pathname](http://www.ruby-doc.org/stdlib-2.0/libdoc/pathname/rdoc/Pathname.html)
+
+# License
+
+Distributed under the BSD license, please see LICENSE for more information.
