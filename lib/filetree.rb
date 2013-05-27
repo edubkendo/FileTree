@@ -23,9 +23,13 @@ class FileTree < Pathname
     @identifier ||= self.inspect
   end
 
+  # See #Pathname.parent
+
   def parent
     FileTree.new(_parent)
   end
+
+  #See #Pathname.children
 
   def children(*args)
     if self.directory?

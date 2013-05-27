@@ -68,11 +68,11 @@ A simple tree structure for working with FilePath objects in ruby. I simply took
 ```
 # Credits
 
-All credit belongs to, I just cobbled this together from their work.
+All credit belongs to the following persons, I just cobbled this together from their work:
 
 - [@ealdent](https://github.com/ealdent/simple-tree)
 - The authors and maintainers of [Pathname](http://www.ruby-doc.org/stdlib-2.0/libdoc/pathname/rdoc/Pathname.html)
 
 # License
 
-Distributed under the BSD license, please see LICENSE for more information.
+Distributed under the BSD license, please see [LICENSE](https://github.com/edubkendo/FileTree/blob/master/LICENSE) for more information.
