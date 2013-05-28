@@ -2,12 +2,13 @@
 
 A simple tree structure for working with FilePath objects in ruby. I simply took the simple_tree module from https://github.com/ealdent/simple-tree and hacked it into [Pathname](http://www.ruby-doc.org/stdlib-2.0/libdoc/pathname/rdoc/Pathname.html) from the std-lib. This means you get all the awesome features of working with Pathname, as well as making it easy to examine a filepath's ancestors and descendants.
 
+# Usage
+
 ## Install
 
 install with: `gem install filetree`
 
-
-# Usage
+## Examples
 
 ```ruby
 
