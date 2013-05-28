@@ -39,7 +39,7 @@ des_arr = tree.descendants.map { |e| FileTree.new(e.relative_path_from(FileTree.
 des_arr.first
 # => #<FileTree:test/test1/test2/testee>
 
-des_arr.last.ancestors # infinite loop. "ancestors" depends on hitting "/" to stop.
+# des_arr.last.ancestors # infinite loop. "ancestors" depends on hitting "/" to stop.
 
 # the "tree_rep" method provides prettyprinting for creating your own to_s methods
 puts tree.tree_rep

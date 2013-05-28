@@ -23,14 +23,20 @@ class FileTree < Pathname
     @identifier ||= self.inspect
   end
 
-  # See Pathname#parent
-
+  #
+  # See {http://rubydoc.info/stdlib/pathname/Pathname:parent Pathname.parent}
+  #
+  # @return [FileTree] The directory immediately above self.
+  #
   def parent
     FileTree.new(_parent)
   end
 
-  # See Pathname#children
-
+  #
+  # See {http://rubydoc.info/stdlib/pathname/Pathname:children Pathname.children}
+  #
+  # @return [Array] an Array of all entries contained in self.
+  #
   def children(*args)
     if self.directory?
       _children(*args)
