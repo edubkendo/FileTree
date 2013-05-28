@@ -72,6 +72,10 @@ install with: `gem install filetree`
     # >>      |    \- #<FileTree:/home/user/test/test1/test2/testee/test3/no>
 
 ```
+# Documentation
+
+View the [docs](http://rubydoc.info/gems/filetree).
+
 # Credits
 
 All credit belongs to the following persons, I just cobbled this together from their work:
