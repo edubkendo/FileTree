@@ -1,5 +1,5 @@
 require "pathname"
-require "filetree/simple_tree"
+require_relative "./filetree/simple_tree"
 
 class Pathname
   alias :_parent :parent
@@ -8,6 +8,8 @@ end
 
 class FileTree < Pathname
   include SimpleTree
+
+  VERSION = "1.0.0"
 
   attr_accessor :name, :id, :identifier
 

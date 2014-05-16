@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    filetree (0.0.3)
+    filetree (1.0.0)
 
 GEM
   remote: https://rubygems.org/
