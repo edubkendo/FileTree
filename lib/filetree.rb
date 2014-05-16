@@ -45,4 +45,10 @@ class FileTree < Pathname
     end
   end
 
+  #
+  # Joins the given pathnames onto self to create a new FileTree object.
+  def join(*args)
+    FileTree.new(super(*args))
+  end
+
 end
